@@ -1,0 +1,9 @@
+imread
+opencv-contrib-python
+argparse
+numpy
+imutils
+scikit-image=0.18.1
+matplotlib
+CMake
+apriltag
