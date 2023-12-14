@@ -1,3 +1,5 @@
+# https://pyimagesearch.com/2021/01/04/opencv-augmented-reality-ar/?_ga=2.249952902.1816397012.1702485325-1842902230.1698424416
+# usage: python opencv_ar_image.py --image input_03.jpg --source alice_and_janet.jpeg
 import numpy as np
 import argparse
 import imutils
@@ -117,8 +119,8 @@ cv2.fillConvexPoly(mask, destination_coordinates.astype("int32"), (0, 0, 0), cv2
 mask = np.dstack([mask] * 3) # stack the mask such that it shares the same dimensions as GBR images
 
 # warped_in_mask = cv2.multiply(warped.astype(float), mask)
-mask_in_image = cv2.multiply(image.astype(float), mask)
-output = cv2.add(warped.astype(float), mask_in_image)
+mask_in_image = cv2.multiply(image.astype(float), mask) # essentially, do an element by element multiplication
+output = cv2.add(warped.astype(float), mask_in_image) # element by element addition
 output = output.astype("uint8") # convert the data type to uint8 so that it can be displayed
 # cv2.imshow("warped in mask", warped_in_mask.astype("uint8"))
 
