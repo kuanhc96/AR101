@@ -1,3 +1,7 @@
+# https://pyimagesearch.com/2021/01/11/opencv-video-augmented-reality/?_ga=2.61942508.1361679024.1702885496-1842902230.1698424416
+# usage: python opencv_ar_video.py --input jp_trailer_short.mp4
+# usage: python opencv_ar_video.py --input jp_trailer_short.mp4 --cache 0
+# usage: python opencv_ar_video.py --input jp_trailer_short.mp4 --output results.mp4
 from pyimagesearch.augmented_reality import find_and_warp
 from imutils.video import VideoStream
 from collections import deque # this provides a queue data structure (FIFO)
